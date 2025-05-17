@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Registration Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f0f0f0;
+      --form-light: #ffffff;
+      --text-light: #333;
+      --bg-dark: #1f1f1f;
+      --form-dark: #2e2e2e;
+      --text-dark: #eee;
+      --primary: #2193b0;
+      --shadow: rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 500px) {
+  .form-container {
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .theme-toggle {
+    padding: 6px 12px;
+    font-size: 14px;
+    top: 15px;
+    right: 15px;
+  }
+
+  input, select {
+    padding: 8px;
+  }
+
+  input[type="submit"] {
+    padding: 10px;
+  }
+}
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg-light);
+      transition: background 0.3s ease;
+    }
+    body.dark {
+      background: var(--bg-dark);
+    }
+    .form-container {
+      background: var(--form-light);
+      color: var(--text-light);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px var(--shadow);
+      width:100%;
+      max-width: 450px;
+      animation: fadeIn 1s ease;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark .form-container {
+      background: var(--form-dark);
+      color: var(--text-dark);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: border 0.3s;
+    }
+    input:focus, select:focus {
+      border-color: var(--primary);
+    }
+    input[type="submit"] {
+      background: var(--primary);
+      color: white;
+      border: none;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #1b7aa0;
+    }
+    #success-message {
+      display: none;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      padding: 8px 16px;
+      color: var(--primary);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .theme-toggle:hover {
+      background: var(--primary);
+      color: white;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🖤</button>
+  <div class="form-container">
+    <h2>Student Registration</h2>
+    <form id="regForm" onsubmit="submitRegistration(event)">
+      <label>Roll Number:</label>
+      <input type="text" id="roll" name="roll" required>
+      <label>Full Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label>Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="e.g. 9876543210">
+      <label>Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label>College Name:</label>
+      <input type="text" id="college" name="college" required>
+      <label>Department:</label>
+      <select id="department" name="department" required>
+        <option value="">--Select Department--</option>
+        <option value="CSE">Computer Science</option>
+        <option value="IT">Information Technology</option>
+        <option value="ECE">Electronics & Communication</option>
+        <option value="EEE">Electrical & Electronics</option>
+        <option value="MECH">Mechanical</option>
+        <option value="CIVIL">Civil</option>
+      </select>
+      <label >Events:</label>
+      <select id="event" name="event" required>
+        <option value="">--Select Event--</option>
+        <option value="a">Code-A-Thon</option>
+        <option value="b">Robowar</option>
+        <option value="c">Tech Quiz</option>
+        <option value="d">UI/UX Design</option>
+        <option value="e">Hackathon</option>
+        <option value="f">Paper Presentation</option>
+      </select>
+      <input type="submit" value="Register" onclick="submitRegistration()">
+    </form>
+  </div>
+  <script>
+
+  function toggleTheme() {
+  document.body.classList.toggle("dark");
+  const toggleBtn = document.querySelector(".theme-toggle");
+  toggleBtn.textContent = document.body.classList.contains("dark") ? "🤍" : "🖤";
+}
+function submitRegistration(event) {
+    event.preventDefault();    
+    const form = document.getElementById("regForm");
+    const name = document.getElementById('name').value;    
+    if (name && form) {
+      alert("Thank you for registering, " + name + "! 🎊");
+      setTimeout(function() {
+        window.location.href = "index.html"; 
+      }, 100);
+    }
+  }
+  </script>
+</body>
+</html>

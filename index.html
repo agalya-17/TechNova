@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNova 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TechNova</h1>
+    <p>InterNational Level Tech Fest |  17 November  2050 | KCE Campus</p>
+
+  </header>
+  <section class="section">
+    <h2>About TechNova</h2>
+    <p>TechNova is a grand international-level fest bringing together tech enthusiasts, innovators, and creators to showcase talent through competitions, workshops, and inspiring talks.</p>
+  </section>
+  <section class="section">
+    <h2>Events</h2>
+    <div class="events">
+      <div class="card" onclick="showPopup('Code-A-Thon', ['Web Scraper', 'AI Chatbot', 'Bug Fixing Challenge', 'API Integration', 'Code Golf'])">
+        <h3>Code-A-Thon</h3>
+        <p>A 24-hour coding challenge to test your skills and speed.</p>
+      </div>
+      <div class="card" onclick="showPopup('Robowar', ['Sumo Bots', 'Line Follower', 'Obstacle Course', 'Maze Solver', 'Drone Race'])">
+        <h3>Robowar</h3>
+        <p>Design, build, and battle your bots in the ultimate arena.</p>
+      </div>
+      <div class="card" onclick="showPopup('Tech Quiz', ['Latest Tech Trends', 'History of Computing', 'Programming Basics', 'Cybersecurity', 'AI & ML'])">
+        <h3>Tech Quiz</h3>
+        <p>Showcase your technical knowledge in a fast-paced quiz contest.</p>
+      </div>
+      <div class="card" onclick="showPopup('UI/UX Design', ['Mobile App UI', 'E-commerce Website UX', 'Dark Mode Interface', 'Dashboard Design', 'User Journey Map'])">
+        <h3>UI/UX Design</h3>
+        <p>Create innovative user interfaces that solve real problems.</p>
+      </div>
+      <div class="card" onclick="showPopup('Hackathon', ['Smart City Solutions', 'Healthcare Innovation', 'Green Tech', 'EduTech Tools', 'Women Safety Apps'])">
+        <h3>Hackathon</h3>
+        <p>The best way to predict the future is to create it, and "It's not about ideas. It's about implementing them. </p>
+      </div>
+      <div class="card" onclick="showPopup('Paper Presentation', ['Quantum Computing', 'IoT Applications', 'AR/VR in Education', 'Blockchain Security', 'AI Ethics'])">
+        <h3>Paper Presentation</h3>
+        <p>An oral presentation of research findings reserved for completed projects.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Countdown to TechNova</h2>
+    <div id="countdown" class="countdown"></div>
+  </section>
+  <form action="pro.html">
+    <button class="register-btn">Register Now</button>
+</form>
+  <section class="section">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <p>Email: technova2050@kce.edu</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Location: Karpagam College of Engineering, Coimbatore</p>
+    </div>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-goodreads"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-telegram"></i></a>
+</div>
+</section>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <button class="close-btn" onclick="closePopup()">X</button>
+    <h3 id="popup-title"></h3>
+    <ul id="popup-list"></ul>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

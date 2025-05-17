@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: white;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: #1e293b;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+  } 
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  header h1:hover{
+    transform: scale(1.20);
+  }
+  header p {
+    font-size: 1.2rem;
+  }
+  .section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #38bdf8;
+  }
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
+  }
+  .card:hover{
+      transform:scale(1.10);
+  }
+  .card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+  }
+  .card h3 {
+    color: #38bdf8;
+  }
+  .register-btn {
+    display: block;
+    margin: 20px auto;
+    background: #38bdf8;
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  .contact {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .countdown {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #f1c40f;
+  }
+  .registration-form {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+    text-align: center;
+  }
+  .registration-form input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #38bdf8;
+  }
+  .registration-form button {
+    background-color: #38bdf8;
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .popup {
+display: none;
+position: fixed;
+z-index: 999;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+.popup.show {
+opacity: 1;
+display:block;
+}
+.popup-content {
+background-color: #2e3b4e;
+margin: 15% auto;
+padding: 30px;
+border: 1px solid #444;
+width: 60%;
+max-width: 600px;
+color: #fff;
+border-radius: 12px;
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+transform: scale(0.8);
+animation: popup-animation 0.3s forwards;
+}
+@keyframes popup-animation {
+to {
+  transform: scale(1);
+}
+}
+.popup h3 {
+font-size: 1.5em;
+margin-bottom: 15px;
+color: #f3f3f3;
+}
+.popup ul {
+list-style-type: none;
+padding: 0;
+}
+.popup li {
+padding: 10px;
+margin-bottom: 10px;
+background-color: #3b4a63;
+border-radius: 6px;
+transition: background-color 0.3s;
+}
+.popup li:hover {
+background-color: #576e88;
+}
+.close-btn {
+background-color: #ff5733;
+color: white;
+padding: 8px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+position: absolute;
+top: 10px;
+right: 10px;
+}
+.close-btn:hover {
+background-color:black;
+}
+  .social-icons {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #38bdf8;
+    text-decoration: none;
+  }
+  .social-icons a:hover{
+    color: orange;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+  
